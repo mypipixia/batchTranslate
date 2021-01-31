@@ -17,7 +17,8 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname + '/static'), to: "static", globOptions: { ignore: ['.*'] } }
+                { from: path.resolve(__dirname + '/static'), to: "static", globOptions: { ignore: ['.*'] } },
+                { from: path.resolve(__dirname + '/README.md'), to: "README.md" }
             ],
         }),
     ]
