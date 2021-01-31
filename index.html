@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./static/config.js"></script>
+    <script src="./static/lang.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    .ch-en--main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-btn {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+            7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .btn-4 {
+        background-color: #4dccc6;
+        background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+        line-height: 42px;
+        padding: 0;
+        border: none;
+    }
+
+    .btn-4:hover {
+        background-color: #89d8d3;
+        background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+    }
+
+    .btn-4 span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-4:before,
+    .btn-4:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.9),
+            -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+            inset -4px -4px 6px 0 rgba(255, 255, 255, 0.9),
+            inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .btn-4:before {
+        height: 0%;
+        width: 0.1px;
+    }
+
+    .btn-4:after {
+        width: 0%;
+        height: 0.1px;
+    }
+
+    .btn-4:hover:before {
+        height: 100%;
+    }
+
+    .btn-4:hover:after {
+        width: 100%;
+    }
+
+    .btn-4 span:before,
+    .btn-4 span:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.9),
+            -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+            inset -4px -4px 6px 0 rgba(255, 255, 255, 0.9),
+            inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .btn-4 span:before {
+        width: 0.1px;
+        height: 0%;
+    }
+
+    .btn-4 span:after {
+        width: 0%;
+        height: 0.1px;
+    }
+
+    .btn-4 span:hover:before {
+        height: 100%;
+    }
+
+    .btn-4 span:hover:after {
+        width: 100%;
+    }
+
+    .el-upload {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        margin-bottom: 20px;
+    }
+
+    .el-upload-dragger {
+        background-color: #fff;
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        box-sizing: border-box;
+        width: 360px;
+        height: 180px;
+        line-height: 180px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .el-upload__text {
+        color: #606266;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .el-upload__input {
+        display: none;
+        background-color: initial;
+        cursor: default;
+        align-items: baseline;
+        color: inherit;
+        text-overflow: ellipsis;
+        white-space: pre;
+        text-align: start !important;
+        padding: initial;
+        border: initial;
+        overflow: hidden !important;
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        -webkit-rtl-ordering: logical;
+        font: 400 13.3333px Arial;
+    }
+
+    .error {
+        color: red;
+        padding: 0;
+        margin: 0;
+    }
+
+    .progress {
+        padding: 20px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="ch-en--main">
+        <div class="main-btn btn-4 loadExort"><span>导出文件</span></div>
+        <div class="progress">
+            执行数 <span class="progress-num">0</span>
+            总数 <span class="progress-allnum">0</span>
+        </div>
+        <ul class="error">
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+</script>
