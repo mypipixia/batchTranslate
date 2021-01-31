@@ -121,10 +121,11 @@ function promiseNum(promiseArr) {
 function timeOneSc(startTime, resolve) {
     let endTime = Date.now();
     let allTime = endTime - startTime;
+    let setTime = LOADNUM == 1 ? 1000 : 1100 - allTime
     if (allTime < 1100) {
         setTimeout(() => {
             resolve()
-        }, 1100 - allTime);
+        }, setTime);
     } else {
         resolve()
     }

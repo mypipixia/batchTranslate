@@ -20,8 +20,8 @@ function key1({ value, length }) {
     document.querySelector('.progress-num').innerText = value;
     document.querySelector('.progress-allnum').innerText = length;
     if (value == length) {
+        document.querySelector('.progress').style.color = '#67C23A';
         setTimeout(() => {
-            document.querySelector('.progress').style.color = '#67C23A';
             alert('执行完成');
         }, 1000);
     }
@@ -45,11 +45,11 @@ export function initProxy(obj, { obser, length }) {
         [KEY2]: []
     }
     Object.keys(targetObject).forEach((key) => {
+        obser.add(key, strategy[key])
         Object.defineProperty(obj, key, {
             enumerable: true,
             configurable: true,
             get() {
-                obser.add(key, strategy[key])
                 return targetObject[key]
             },
             set(value) {
