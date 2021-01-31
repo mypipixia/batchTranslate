@@ -1,15 +1,5 @@
 const LANG = {
-    View_details: '查看详情',
-    The_start_time_should_be_less_than_the_end_time: '开始时间要小于结束时间',
-    The_end_time_should_be_greater_than_the_start_time: '结束时间要大于开始时间',
-    Please_enter_department_name: '请输入部门名称',
-    Holiday_interval: '假期区间',
-    Organization_chart_setting: '组织机构图设置',
-    level: '水平',
-    Horizontal_expansion: '水平展开',
-    fold: '折叠',
-    Display_collapse: '显示折叠',
-    Number_of_people: '人数',
+
     Show_number_of_people: '显示人数',
     Display_establishment: '显示编制',
     Virtual_Department: '虚拟部门',

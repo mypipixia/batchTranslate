@@ -15,6 +15,7 @@ export const strategy = {
  * @param {*} length //数组总长度
  */
 function key1({ value, length }) {
+    document.querySelector('.progress').style.color = 'black';
     document.querySelector('.progress').style.display = 'block';
     document.querySelector('.progress-num').innerText = value;
     document.querySelector('.progress-allnum').innerText = length;
