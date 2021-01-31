@@ -20,8 +20,8 @@ function dotranEn(q, key, isNeedone = false) {
         var sign = MD5(str1);
         let startTime = Date.now()
         $.ajax({
-            url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
-            type: 'get',
+            url: HTTPAPI,
+            type: HTTPMethod,
             dataType: 'jsonp',
             async: false,
             data: {
