@@ -2,17 +2,17 @@
 
 ## Project setup
 ```
-cnpm install
+cnpm install || yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run dev
+npm run dev || yarn dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run build || yarn build
 ```
 
 ### 配置说明 static/config.js
